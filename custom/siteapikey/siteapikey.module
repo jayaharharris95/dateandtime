@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * @file
+ * Alter site information using siteapikey.module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM-ID_alter
+ * Add new field in Site information form.
+ * This is to Add New field siteapikey in Site information page
+ */
+function siteapikey_form_system_site_information_settings_alter(&$form, FormStateInterface $form_state)
+{
+    $siteapikey = \Drupal::config('siteapikey.settings')->get('siteapikey');
+
+    $form['site_information']['siteapikey'] = [
+      '#type' => 'textfield',
+      '#title' => t('Site API Key'),
+      '#default_value' => $siteapikey,
+      '#placeholder' => t('No API Key yet'),
+    ];
+
+    // Change button value
+    $form['actions']['submit']['#value'] = t('Update Configuration');
+
+    //Submit handler to store siteapikey value into siteapikey.setting
+    $form['#submit'][] = 'siteapikey_siteinformation_submit_handler';
+}
+
+//Submit handler to store siteapikey value into siteapikey.setting
+function siteapikey_siteinformation_submit_handler(&$form, FormStateInterface $formState)
+{
+    $siteapikeyvalue = $form['site_information']['siteapikey']['#value'];
+    
+    if ($siteapikeyvalue != \Drupal::config('siteapikey.settings')->get('siteapikey') && empty($siteapikeyvalue) == false)
+    {
+        \Drupal::configFactory()->getEditable('siteapikey.settings')
+          ->set('siteapikey', $siteapikeyvalue)
+          ->save();
+
+        drupal_set_message(t('Site API Key " @siteapikey " has been updated Successfully.', array('@siteapikey' => $siteapikeyvalue)), 'status');
+    }
+}

@@ -1,0 +1,10 @@
+siteapikey.page:
+  path: '/nodevalidate/{key}/{nid}'
+  defaults:
+    _controller: '\Drupal\siteapikey\Controller\ApiNodeValidate::nodevalidate'
+  options:
+    parameters:
+      nid:
+        type: integer
+  requirements:
+    _permission: 'access content'
