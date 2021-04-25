@@ -1,0 +1,3 @@
+services:
+  currenttime:
+    class: Drupal\dateandtime\Services\getTimeFromTimeZone
