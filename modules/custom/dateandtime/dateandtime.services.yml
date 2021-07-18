@@ -1,0 +1,7 @@
+services:
+  currenttime:
+    class: Drupal\dateandtime\Services\getTimeFromTimeZone
+  weather_service:
+    class: Drupal\dateandtime\Services\getWeatherData
+    arguments:
+      - '@http_client_factory'
