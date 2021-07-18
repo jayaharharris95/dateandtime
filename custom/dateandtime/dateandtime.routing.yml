@@ -1,7 +1,0 @@
-dateandtime.admin_settings:
-  path: '/admin/config/dateandtime'
-  defaults:
-    _form: '\Drupal\dateandtime\Form\DateAndTimeConfig'
-    _title: 'dateandtime configuration screen'
-  requirements:
-    _permission: 'administer site configuration'
