@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function dateandtime_theme($existing, $type, $theme, $path) {
+  return [
+    'dateandtime__time_zone' => [
+      'variables' => [
+        'country' => NULL,
+        'city' => NULL,
+        'time' => NULL,
+      ],
+    ],
+  ];
+}
+?>

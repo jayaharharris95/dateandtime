@@ -1,0 +1,4 @@
+name: dateandtime
+type: module
+description: custom module for updating date and time 
+core: 8.x
