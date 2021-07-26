@@ -46,7 +46,11 @@
         "laminas/laminas-diactoros": "^1.8",
         "composer/semver": "^1.0",
         "asm89/stack-cors": "^1.1",
+<<<<<<< HEAD
         "pear/archive_tar": "^1.4.14",
+=======
+        "pear/archive_tar": "^1.4.12",
+>>>>>>> 88d3f59207efca76911d5883e53561263447a1f8
         "psr/log": "^1.0"
     },
     "conflict": {

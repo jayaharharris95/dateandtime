@@ -32,10 +32,17 @@ Also Lzma2 compressed archives are supported with xz extension.</description>
   <email>stig@php.net</email>
   <active>no</active>
  </helper>
+<<<<<<< HEAD
  <date>2021-07-20</date>
  <time>18:00:00</time>
  <version>
   <release>1.4.14</release>
+=======
+ <date>2021-02-16</date>
+ <time>10:49:28</time>
+ <version>
+  <release>1.4.13</release>
+>>>>>>> 88d3f59207efca76911d5883e53561263447a1f8
   <api>1.4.0</api>
  </version>
  <stability>
@@ -44,7 +51,11 @@ Also Lzma2 compressed archives are supported with xz extension.</description>
  </stability>
  <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
  <notes>
+<<<<<<< HEAD
 * Properly fix symbolic link path traversal (CVE-2021-32610)
+=======
+* Fix Bug #27010: Relative symlinks failing (out-of path file extraction) [mrook]
+>>>>>>> 88d3f59207efca76911d5883e53561263447a1f8
  </notes>
  <contents>
   <dir name="/">
@@ -76,6 +87,7 @@ Also Lzma2 compressed archives are supported with xz extension.</description>
  <changelog>
   <release>
    <version>
+<<<<<<< HEAD
     <release>1.4.13</release>
     <api>1.4.0</api>
    </version>
@@ -91,6 +103,8 @@ Also Lzma2 compressed archives are supported with xz extension.</description>
   </release>
   <release>
    <version>
+=======
+>>>>>>> 88d3f59207efca76911d5883e53561263447a1f8
     <release>1.4.12</release>
     <api>1.4.0</api>
    </version>
