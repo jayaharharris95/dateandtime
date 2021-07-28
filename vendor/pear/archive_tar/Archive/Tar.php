@@ -2124,7 +2124,6 @@ class Archive_Tar extends PEAR
                             }
                         }
                     } elseif ($v_header['typeflag'] == "2") {
-<<<<<<< HEAD
                         if (!$p_symlinks) {
                             $this->_warning('Symbolic links are not allowed. '
                                 . 'Unable to extract {'
@@ -2159,27 +2158,6 @@ class Archive_Tar extends PEAR
                             }
                         }
                         if ($absolute_link || $link_depth <= 0) {
-=======
-                        $link_depth = 0;
-                        foreach (explode("/", $v_header['filename']) as $dir) {
-                            if ($dir === "..") {
-                                $link_depth--;
-                            } elseif ($dir !== "" && $dir !== "." ) {
-                                $link_depth++;
-                            }
-                        }
-                        foreach (explode("/", $v_header['link']) as $dir){
-                            if ($link_depth <= 0) {
-                                break;
-                            }
-                            if ($dir === "..") {
-                                $link_depth--;
-                            } elseif ($dir !== "" && $dir !== ".") {
-                                $link_depth++;
-                            }
-                        }
-                        if (strpos($v_header['link'], "/") === 0 or $link_depth <= 0) {
->>>>>>> 88d3f59207efca76911d5883e53561263447a1f8
                             $this->_error(
                                  'Out-of-path file extraction {'
                                  . $v_header['filename'] . ' --> ' .
@@ -2187,16 +2165,6 @@ class Archive_Tar extends PEAR
                             );
                             return false;
                         }
-<<<<<<< HEAD
-=======
-                        if (!$p_symlinks) {
-                            $this->_warning('Symbolic links are not allowed. '
-                                . 'Unable to extract {'
-                                . $v_header['filename'] . '}'
-                            );
-                            return false;
-                        }
->>>>>>> 88d3f59207efca76911d5883e53561263447a1f8
                         if (@file_exists($v_header['filename'])) {
                             @unlink($v_header['filename']);
                         }

@@ -6,7 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-<<<<<<< HEAD
     'Archive_Tar' => $vendorDir . '/pear/archive_tar/Archive/Tar.php',
     'ArithmeticError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
     'Asm89\\Stack\\Cors' => $vendorDir . '/asm89/stack-cors/src/Asm89/Stack/Cors.php',
@@ -3747,21 +3746,5 @@ return array(
     'Twig_TokenStream' => $vendorDir . '/twig/twig/lib/Twig/TokenStream.php',
     'Twig_Util_DeprecationCollector' => $vendorDir . '/twig/twig/lib/Twig/Util/DeprecationCollector.php',
     'Twig_Util_TemplateDirIterator' => $vendorDir . '/twig/twig/lib/Twig/Util/TemplateDirIterator.php',
-=======
-    'ArithmeticError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
-    'AssertionError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
-    'DivisionByZeroError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php',
-    'Drupal' => $baseDir . '/core/lib/Drupal.php',
-    'Drupal\\Component\\Utility\\Timer' => $baseDir . '/core/lib/Drupal/Component/Utility/Timer.php',
-    'Drupal\\Component\\Utility\\Unicode' => $baseDir . '/core/lib/Drupal/Component/Utility/Unicode.php',
-    'Drupal\\Core\\Database\\Database' => $baseDir . '/core/lib/Drupal/Core/Database/Database.php',
-    'Drupal\\Core\\DrupalKernel' => $baseDir . '/core/lib/Drupal/Core/DrupalKernel.php',
-    'Drupal\\Core\\DrupalKernelInterface' => $baseDir . '/core/lib/Drupal/Core/DrupalKernelInterface.php',
-    'Drupal\\Core\\Site\\Settings' => $baseDir . '/core/lib/Drupal/Core/Site/Settings.php',
-    'Error' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/Error.php',
-    'PEAR_Exception' => $vendorDir . '/pear/pear_exception/PEAR/Exception.php',
-    'ParseError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/ParseError.php',
-    'SessionUpdateTimestampHandlerInterface' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/SessionUpdateTimestampHandlerInterface.php',
->>>>>>> 88d3f59207efca76911d5883e53561263447a1f8
     'TypeError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/TypeError.php',
 );
